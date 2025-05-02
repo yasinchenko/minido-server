@@ -1,0 +1,24 @@
+[0;1;32m●[0m minido.service - Minido FastAPI App
+     Loaded: loaded (/etc/systemd/system/minido.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Thu 2025-05-01 12:03:30 UTC; 10s ago
+   Main PID: 667705 (gunicorn)
+      Tasks: 9 (limit: 4607)
+     Memory: 201.4M
+        CPU: 3.810s
+     CGroup: /system.slice/minido.service
+             ├─667705 /root/Minido/task_server/venv/bin/python3 /root/Minido/task_server/venv/bin/gunicorn app.main:app --workers 4 --bind 0.0.0.0:8000 --worker-class uvicorn.workers.UvicornWorker
+             ├─667735 /root/Minido/task_server/venv/bin/python3 /root/Minido/task_server/venv/bin/gunicorn app.main:app --workers 4 --bind 0.0.0.0:8000 --worker-class uvicorn.workers.UvicornWorker
+             ├─667736 /root/Minido/task_server/venv/bin/python3 /root/Minido/task_server/venv/bin/gunicorn app.main:app --workers 4 --bind 0.0.0.0:8000 --worker-class uvicorn.workers.UvicornWorker
+             ├─667737 /root/Minido/task_server/venv/bin/python3 /root/Minido/task_server/venv/bin/gunicorn app.main:app --workers 4 --bind 0.0.0.0:8000 --worker-class uvicorn.workers.UvicornWorker
+             └─667738 /root/Minido/task_server/venv/bin/python3 /root/Minido/task_server/venv/bin/gunicorn app.main:app --workers 4 --bind 0.0.0.0:8000 --worker-class uvicorn.workers.UvicornWorker
+
+May 01 12:03:33 ruvds-3ulcw bash[667738]: [2025-05-01 12:03:33 +0000] [667738] [INFO] Application startup complete.
+May 01 12:03:33 ruvds-3ulcw bash[667737]: /root/Minido/task_server/venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:
+May 01 12:03:33 ruvds-3ulcw bash[667737]: * 'orm_mode' has been renamed to 'from_attributes'
+May 01 12:03:33 ruvds-3ulcw bash[667737]:   warnings.warn(message, UserWarning)
+May 01 12:03:33 ruvds-3ulcw bash[667735]: [2025-05-01 12:03:33 +0000] [667735] [INFO] Started server process [667735]
+May 01 12:03:33 ruvds-3ulcw bash[667735]: [2025-05-01 12:03:33 +0000] [667735] [INFO] Waiting for application startup.
+May 01 12:03:33 ruvds-3ulcw bash[667735]: [2025-05-01 12:03:33 +0000] [667735] [INFO] Application startup complete.
+May 01 12:03:33 ruvds-3ulcw bash[667737]: [2025-05-01 12:03:33 +0000] [667737] [INFO] Started server process [667737]
+May 01 12:03:33 ruvds-3ulcw bash[667737]: [2025-05-01 12:03:33 +0000] [667737] [INFO] Waiting for application startup.
+May 01 12:03:33 ruvds-3ulcw bash[667737]: [2025-05-01 12:03:33 +0000] [667737] [INFO] Application startup complete.
