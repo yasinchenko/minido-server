@@ -19,6 +19,10 @@ def create_task(task: schemas.TaskCreate, db: Session = Depends(get_db), user: m
 def list_tasks(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
     return db.query(models.Task).filter_by(user_id=user.id, is_archived=False).all()
 
+@router.get("/all", response_model=list[schemas.TaskOut])  # ✅ Добавлено
+def list_all_tasks(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    return db.query(models.Task).filter_by(user_id=user.id).all()
+
 @router.patch("/{task_id}/archive")
 def archive_task(task_id: int, db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
     task = db.query(models.Task).filter_by(id=task_id, user_id=user.id).first()
